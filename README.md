@@ -1,4 +1,4 @@
-# spine-react
+# HRMS-react
 This project is created or learning purpose. Following topics will be covered in this project
 - VSC/Editor setup
 - Project setup
@@ -12,6 +12,8 @@ This project is created or learning purpose. Following topics will be covered in
 # Creating APP
 The application is created using CRA which is CLI to create React App. For more info https://create-react-app.dev/.
 npx create-react-app hrms-react --template typescript
+
+MUI:https://mui.com/getting-started/usage/: Frontend framework
 
 
 
