@@ -21,4 +21,8 @@ MUI:https://mui.com/getting-started/usage/: Frontend framework
 npm install --save-dev --save-exact prettier
 Add .prettierrc.json file and add the configuration in it
 
+# env
+- To hot reloader to work on react above 17 a config is ended in .env file
+- The solution was found at: https://github.com/facebook/create-react-app/issues/9904
+
 
