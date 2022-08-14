@@ -5,7 +5,11 @@ import { Carousel } from '../../../components';
 export const BirthDay: React.FC = () => {
   return (
     <Paper>
-       <Carousel />
+       <Carousel>
+          <div>Item 1</div>
+          <div>Item 2</div>
+          <div>Item 3</div>
+       </Carousel>
     </Paper>
   );
 };
