@@ -37,12 +37,8 @@ export const SidebarNav: React.FC = () => {
       subLinks: [
         {
           name: 'Employee List',
-          link: '/employee-list',
-        },
-        {
-          name: 'Employee Details',
-          link: '/employee-details',
-        },
+          link: '/employee/employee-list',
+        }
       ],
     },
   ];
