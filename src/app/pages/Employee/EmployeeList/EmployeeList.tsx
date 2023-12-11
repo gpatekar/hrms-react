@@ -35,7 +35,7 @@ export const EmployeeList: React.FC = () => {
       <PageTitle>Employee List</PageTitle>
       <Grid container spacing={2}>
         {employeeList.map((employee) => (
-          <Grid item xs={4}>
+          <Grid item xs={4} key={employee.code}>
             <Card>
               <Box sx={{ display: 'flex', flexDirection: 'column' }}>
                 <CardContent sx={{ flex: '1 0 auto' }}>

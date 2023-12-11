@@ -1,23 +1,23 @@
 import React from 'react';
-import { BrowserRouter, Route, Switch, useParams } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
-import { BasePage, Dashboard, Employee } from './pages';
+import { BasePage, Dashboard, Employee, Login, Formik } from './pages';
+import { PrivateRoute } from './components';
+import Auth0ProviderWithHistory from '../auth/Auth0ProviderWithHistory';
 
 export const AppRoutes: React.FC = () => {
-  function BlogPost() {
-    let { slug }: any = useParams();
-    return <div>Now showing post {slug}</div>;
-  }
-
   return (
-    <BasePage>
-      <BrowserRouter>
-        <Switch>
-          <Route exact path="/" component={Dashboard}></Route>
-          <Route path="/employee" component={Employee}>
-          </Route>
-        </Switch>
-      </BrowserRouter>
-    </BasePage>
+    <BrowserRouter>
+      <Switch>
+        <Route path="/login" component={Login} />
+        <Auth0ProviderWithHistory>
+          <BasePage>
+            <Route path="/employee" component={Employee} />
+            <Route path="/formik-demo" component={Formik} />
+            <Route exact path="/" component={Dashboard} />
+          </BasePage>
+        </Auth0ProviderWithHistory>
+      </Switch>
+    </BrowserRouter>
   );
 };

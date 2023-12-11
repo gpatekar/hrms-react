@@ -11,7 +11,7 @@ export const Employee = () => {
         <Route path={`${path}/employee-list`}>
           <EmployeeList />
         </Route>
-        <Route exact path={`${path}/employee-details:id`}>
+        <Route path={`${path}/employee-details:id`}>
           <EmployeeDetails />
         </Route>
       </Switch>

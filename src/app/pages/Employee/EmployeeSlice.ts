@@ -55,7 +55,7 @@ export const EmployeeSlice = createSlice({
   },
 });
 
-export const employees = (state: RootState) => state.employeeReducer.employeeList;
+// export const employees = (state: RootState) => state.employeeReducer.employeeList;
 
 export const { getEmployee, getEmployeeList } = EmployeeSlice.actions;
 
