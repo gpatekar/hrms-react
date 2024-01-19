@@ -17,6 +17,19 @@ import {
 } from '@mui/material';
 
 export const BasicForm = () => {
+  const schema = Yup.object().shape({
+    email: Yup.string().required('Required').email('Invalid email'),
+    phone: Yup.number()
+      .required('Required')
+      .nullable(true)
+      .positive("A phone number can't start with a minus")
+      .integer("A phone number can't include a decimal point"),
+    count: Yup.number().required('Required').min(2, 'Minimum 2').max(50, 'Maximum 50'),
+    cities: Yup.array().required('Required').min(2, 'Minimum 2').max(50, 'Maximum 50'),
+    checkboxGroup: Yup.array().required('Required').min(1, 'Minimum 2'),
+    isAllowed: Yup.boolean().required('Required'),
+  });
+
   const initialValues = {
     email: '',
     phone: '',
@@ -25,18 +38,6 @@ export const BasicForm = () => {
     isAllowed: '',
     count: '',
   };
-
-  const schema = Yup.object().shape({
-    email: Yup.string().required('Required').email('Invalid email'),
-    phone: Yup.number()
-      .required('Required')
-      .positive("A phone number can't start with a minus")
-      .integer("A phone number can't include a decimal point"),
-    count: Yup.number().required('Required').min(2, 'Minimum 2').max(50, 'Maximum 50'),
-    cities: Yup.array().required('Required').min(2, 'Minimum 2').max(50, 'Maximum 50'),
-    checkboxGroup: Yup.array().required('Required').min(1, 'Minimum 2'),
-    isAllowed: Yup.boolean().required('Required'),
-  });
 
   const handleSubmit = (values: typeof initialValues) => {
     console.log(values);

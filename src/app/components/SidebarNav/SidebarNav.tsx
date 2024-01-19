@@ -41,6 +41,16 @@ export const SidebarNav: React.FC = () => {
         }
       ],
     },
+    {
+      name: 'Demos',
+      link: '',
+      subLinks: [
+        {
+          name: 'Formik demo',
+          link: 'formik-demo',
+        }
+      ],
+    },
   ];
 
   const dropdownMenu = (menuItem: nav) => {

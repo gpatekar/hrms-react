@@ -14,7 +14,7 @@ export const AppRoutes: React.FC = () => {
           <BasePage>
             <Route path="/employee" component={Employee} />
             <Route path="/formik-demo" component={Formik} />
-            <Route exact path="/" component={Dashboard} />
+            <Route exact path="/" component={Dashboard} />    
           </BasePage>
         </Auth0ProviderWithHistory>
       </Switch>
