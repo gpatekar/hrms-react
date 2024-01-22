@@ -3,14 +3,15 @@ import CssBaseline from '@mui/material/CssBaseline';
 
 import { AppRoutes } from './AppRoute';
 
+import yup from './configs/YupConfig';
 
-const App:React.FC = () => {
+const App: React.FC = () => {
   return (
     <div className="App">
-      <CssBaseline/>
-      <AppRoutes/>
+      <CssBaseline />
+      <AppRoutes />
     </div>
   );
-}
+};
 
 export default App;
