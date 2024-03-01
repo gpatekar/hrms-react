@@ -48,6 +48,11 @@ export const SidebarNav: React.FC = () => {
         {
           name: 'Formik demo',
           link: 'formik-demo',
+        },
+        
+        {
+          name: 'Editor demo',
+          link: 'editor-demo',
         }
       ],
     },
